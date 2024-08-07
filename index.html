@@ -208,20 +208,25 @@
         /* Adjusted Padding for Overlapping Issue */
         #about { /* Assuming the "About Me" section has an ID of 'about' */
             padding-top: 100px; /* Increase this value to ensure the section content is visible below the navbar */
-    } /* CSS for the rectangular banner */
+    } 
+
+        /* CSS for the rectangular banner */
         .banner {
             width: 100%;
             position: relative;
             overflow: hidden;
             margin-bottom: 0px; /* Add spacing below the banner */
-            
+            background-color: #000;
         }
+
         .banner img {
             width: 100%;
             height: auto;
             object-fit: cover; /* Ensure image covers the area */
             border-radius: 0; /* Set border radius to 0 for rectangle */
+            animation: slideIn 3s ease-in-out forwards; /* Animation for the banner image */
         }
+
         .banner-text {
             position: absolute;
             top: 50%;
@@ -230,7 +235,40 @@
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 1s forwards; /* Fade-in animation for text */
         }
+
+        .banner-text h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .banner-text p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .banner-text .btn {
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .banner-text .btn:hover {
+            transform: scale(1.1); /* Enlarge button on hover */
+            background-color: #0056b3; /* Change button color on hover */
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
     </style>
 </head>
 <body>
