@@ -208,11 +208,9 @@
         /* Adjusted Padding for Overlapping Issue */
         #about { /* Assuming the "About Me" section has an ID of 'about' */
             padding-top: 100px; /* Increase this value to ensure the section content is visible below the navbar */
-    }
-                /* CSS for the rectangular banner */
+    } /* CSS for the rectangular banner */
         .banner {
             width: 100%;
-            height: auto;
             position: relative;
             overflow: hidden;
             margin-bottom: 20px; /* Add spacing below the banner */
@@ -221,6 +219,7 @@
             width: 100%;
             height: auto;
             object-fit: cover; /* Ensure image covers the area */
+            border-radius: 0; /* Set border radius to 0 for rectangle */
         }
         .banner-text {
             position: absolute;
@@ -231,7 +230,6 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             text-align: center;
         }
-
     </style>
 </head>
 <body>
