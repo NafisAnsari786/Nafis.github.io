@@ -210,6 +210,28 @@
             padding-top: 100px; /* Increase this value to ensure the section content is visible below the navbar */
     }
 
+         /* CSS for the banner */
+        .banner {
+            width: 100%;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -240,6 +262,16 @@
             </ul>
         </div>
     </nav>
+
+    <!-- Banner Section -->
+<header class="banner">
+    <img src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif" alt="Welcome Banner">
+    <div class="banner-text">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm Nafis Ansari, a passionate data analyst and web developer.</p>
+        <a href="#about" class="btn btn-primary">Learn More About Me</a>
+    </div>
+</header>
 
     <!-- About Me Section -->
     <div id="about" class="full-screen-container">
